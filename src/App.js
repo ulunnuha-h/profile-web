@@ -11,9 +11,9 @@ function App() {
             <Nav/>
             <div className="container mx-auto">
                 <Hero/> 
-                {/* <About/>
+                <About/>
                 <Project/>
-                <Contact/> */}
+                <Contact/>
             </div>
             <footer className="text-center text-gray-200 border-t-2 p-3 border-gray-600">
                 Made with ☕ by Hanif Ulunnuha Hidayat
