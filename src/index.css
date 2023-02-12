@@ -23,4 +23,11 @@
   .btn-primary{
     @apply bg-orange-500 text-gray-200 rounded-md hover:bg-orange-800 font-bold
   }
+  .paginate{
+    @apply cursor-pointer text-gray-200 hover:text-gray-400
+  }
+  
+  .active{
+    @apply cursor-default text-gray-600
+  }
 }
