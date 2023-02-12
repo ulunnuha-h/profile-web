@@ -3,7 +3,7 @@ import logo from "../Assets/logo512.png";
 
 const Nav = () => {
     return(
-        <nav className="h-16 flex justify-center items-center mx-12 md:justify-between sticky top-0 bg-slate-900">
+        <nav className="h-16 flex justify-center items-center lg:mx-12 md:justify-between sticky top-0 bg-slate-900">
             <a href="/" className="h-full">
                 <img src={logo} alt="logo" className="h-full py-2 md:block hidden"></img>
             </a>
