@@ -1,9 +1,11 @@
 import React from "react";
+import Nav from "./Components/Nav";
 
 function App() {
     return (
-        <div>
-        </div>
+        <main className="bg-slate-900">
+            <Nav/>
+        </main>
     );
 }
 
