@@ -6,7 +6,7 @@ module.exports = {
     fontFamily : {
       'league' : ['League Spartan', 'sans-serif'],
       'baskerville' : ['Libre Baskerville', 'serif']
-    }
+    },
   },
   plugins: [],
 }
