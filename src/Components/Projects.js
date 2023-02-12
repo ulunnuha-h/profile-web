@@ -10,18 +10,17 @@ const paginateStyle = (page,activePage) => {
 }
 
 const prevStyle = (page) => {
-    if(page == 0) return "cursor-default text-gray-600"
+    if(page === 0) return "cursor-default text-gray-600"
     else return "cursor-pointer"
 }
 
 const nextStyle = (page) => {
-    if(page == 3) return "cursor-default text-gray-600"
+    if(page === 3) return "cursor-default text-gray-600"
     else return "cursor-pointer"
 }
 
 const Project = ({data}) => {
-    console.log(data);
-    const [page,setPage] = useState(1);
+    const [page,setPage] = useState(0);
 
     const nextPage = () => {
         if(page < 3) setPage(page+1);
@@ -34,27 +33,27 @@ const Project = ({data}) => {
     const changePage = (pageNumber) => setPage(pageNumber);
 
     return(
-        <main className="h-screen flex justify-center items-center flex-col" id="project">
+        <main className="min-h-screen flex justify-center items-center flex-col" id="project">
             {
-                page == 3 ? 
+                page === 3 ? 
                 <h2 className="text-gray-200 my-36">See other projects on 
-                    <a href="https://github.com/ulunnuha-h" target={"_blank"} className="text-orange-400 hover:text-orange-600"> Github <i className="fa-brands fa-square-github"></i></a>
+                    <a href="https://github.com/ulunnuha-h" className="text-orange-400 hover:text-orange-600"> Github <i className="fa-brands fa-square-github"></i></a>
                 </h2>
                 :
-                <div className="flex w-3/4 2xl:w-3/5">
-                    <div className="flex text-gray-200">
-                        <section className="basis-1/2 px-7 py-2 flex flex-col justify-center">
+                <div className="flex lg:w-3/4 2xl:w-3/5">
+                    <div className="flex text-gray-200 lg:flex-row flex-col-reverse mx-3">
+                        <section className="lg:basis-1/2 lg:px-7 py-2 flex flex-col justify-center">
                             <p className="text-justify bg-slate-100 text-slate-800 p-5 rounded-md">{data[page].desc}</p>
                             <p className="mt-3">Responsibility</p>
                             <ul className="list-disc list-inside font-baskerville text-sm">
                                 {
-                                    data[page].resp.map( val => <li>{val}</li> )
+                                    data[page].resp.map( (val,idx) => <li key={idx}>{val}</li> )
                                 }
                             </ul>
-                            <a href={data[page].github} target="_blank" className="mt-3 w-fit"><i className="fa-brands fa-square-github text-2xl hover:text-gray-400"></i></a>
+                            <a href={data[page].github} className="mt-3 w-fit"><i className="fa-brands fa-square-github text-2xl hover:text-gray-400"></i></a>
                         </section>
-                        <section className="basis-1/2 border-l-gray-500 border-l-2 pl-5 flex flex-col justify-start">
-                            <img src={data[page].img}></img>
+                        <section className="lg:basis-1/2 border-l-gray-500 lg:border-l-2 lg:pl-5 flex flex-col justify-start">
+                            <img src={data[page].img} alt="webimage"></img>
                             <h2 className="m-0 mt-6">{data[page].title}</h2>
                             <p className="text-sm">{data[page].tech}</p>
                         </section>
