@@ -6,7 +6,7 @@
 
 @layer base{
   *{
-    @apply transition-all
+    @apply transition-all scroll-smooth
   }
   h1 {
     @apply text-5xl mb-5 font-league

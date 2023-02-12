@@ -34,7 +34,7 @@ const Project = ({data}) => {
     const changePage = (pageNumber) => setPage(pageNumber);
 
     return(
-        <main className="h-screen flex justify-center items-center flex-col">
+        <main className="h-screen flex justify-center items-center flex-col" id="project">
             {
                 page == 3 ? 
                 <h2 className="text-gray-200 my-36">See other projects on 
