@@ -5,6 +5,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
 @layer base{
+  *{
+    @apply transition-all
+  }
   h1 {
     @apply text-5xl mb-5 font-league
   }
@@ -26,8 +29,10 @@
   .paginate{
     @apply cursor-pointer text-gray-200 hover:text-gray-400
   }
-  
   .active{
     @apply cursor-default text-gray-600
+  }
+  .btn-social{
+    @apply text-xl mx-5 hover:text-orange-400
   }
 }
