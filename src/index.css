@@ -8,6 +8,15 @@
   h1 {
     @apply text-5xl mb-5 font-league
   }
+  h2 {
+    @apply text-3xl mb-5 font-league
+  }
+  h3 {
+    @apply text-xl mb-5 font-league
+  }
+  p {
+    @apply font-baskerville
+  }
 }
 
 @layer components{
