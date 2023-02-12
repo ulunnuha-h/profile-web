@@ -9,13 +9,13 @@
     @apply transition-all scroll-smooth
   }
   h1 {
-    @apply text-5xl mb-5 font-league
+    @apply md:text-5xl md:mb-5 font-league text-3xl mb-3
   }
   h2 {
-    @apply text-3xl mb-5 font-league
+    @apply md:text-3xl md:mb-5 font-league text-xl
   }
   h3 {
-    @apply text-xl mb-5 font-league
+    @apply md:text-xl md:mb-5 font-league text-base
   }
   p {
     @apply font-baskerville
